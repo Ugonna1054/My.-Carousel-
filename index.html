@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript" src= "jquery-1.9.1.min.js"></script>
+<title></title>
+
+<link rel ="stylesheet">
+
+<style type="text/css">
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+*{ box-sizing : border-box
+}
+
+body{background-color:white}
+header {
+margin-top:0vh;
+text-align:center;
+background-color:orange;
+color: indigo
+}
+
+.main_parent {
+border :0px solid grey;
+position :relative ;
+top:-7vh;
+
+}
+
+img {
+
+height:36vh;
+width:90vw;
+margin:3vw;
+
+}
+
+.img1{
+position: absolute;
+
+
+}
+
+
+.right_arrow, .left_arrow {
+color:lightgrey;
+font-size :15vw;
+position : relative;
+text-align :center ;
+right : 9vw;
+
+
+
+}
+
+.left_arrow{
+left:5vw;
+}
+
+
+div.container1{
+border :0px solid grey ;
+position :relative ;
+height : 10vh ;
+display:flex;
+justify-content:space-between ;
+top:6vh ;
+}
+
+
+div.container2 {
+border:0px solid black;
+position :relative ;
+height:5vh;
+width: 40vw;
+display:flex ;
+text-align :center ;
+left:27vw ;
+justify-content:space-around;
+top:15vh;
+align-items:center
+}
+
+.indicator {
+height : 10px;
+width : 10px;
+border :1px solid white ;
+border-radius :60px;
+position :relative;
+
+
+}
+
+
+.effect{
+background-color: white;
+ width :15px ;
+ height:15px 
+ 
+ }
+ 
+ .caption {
+  position: absolute;
+  top:3vh;
+  left:4vw;
+  color:white
+  }
+ 
+ 
+ .text_caption {
+  position: absolute;
+  top:27vh;
+  left:31vw;
+  font-size:20px;
+  color:white
+  }
+ 
+ 
+
+
+.animate_image{
+
+animation-name: carousel;
+animation-duration: 2s;
+animation-timing-function:ease;
+}
+@keyframes carousel {
+from {opacity:.4}
+to {opacity:1}
+
+}
+
+
+ @media (min-width:500px)
+ 
+ {
+ 
+ body {
+ background-color:tomato;
+ 
+ }
+ 
+ .caption {
+ position: absolute;
+ top:8vh;
+ left:4vw;
+ color:white
+ }
+ 
+ img {
+ 
+ height:40vh;
+ width:90vw;
+ margin:3vw;
+ 
+ }
+ 
+ .text_caption {
+ position: absolute;
+ top:50vh;
+ left:31vw;
+ font-size:20px;
+ color:white
+ }
+ 
+ div.container1{
+ border :0px solid grey ;
+ position :relative ;
+ height : 10vh ;
+ display:flex;
+ justify-content:space-between ;
+ top:15vh ;
+ }
+ 
+ div.container2 {
+ border:0px solid black;
+ position :relative ;
+ height:75vh;
+ width: 40vw;
+ display:flex ;
+ text-align :center ;
+ left:27vw ;
+ justify-content:space-around;
+ top:15vh;
+ align-items:center
+ }
+ 
+ 
+ 
+ .right_arrow{
+ left:-7vw;
+ }
+ 
+ 
+ .indicator {
+ height : 12px;
+ width : 12px;
+ border :1px solid white ;
+ border-radius :60px;
+ position :relative;
+ }
+ 
+ 
+ .effect, .indicator:hover 
+ {
+ background-color: white;
+ width :15px ;
+ height:15px 
+ 
+ }
+ 
+ 
+ 
+ 
+ }
+ 
+
+
+
+
+
+
+
+
+
+@media (orientation: landscape)
+
+{
+
+body {
+background-color:red;
+
+}
+
+.caption {
+ position: absolute;
+ top:8vh;
+ left:4vw;
+ color:white
+ }
+ 
+ img {
+ 
+ height:70vh;
+ width:90vw;
+ margin:3vw;
+ 
+ }
+ 
+ .text_caption {
+ position: absolute;
+ top:50vh;
+ left:31vw;
+ font-size:20px;
+ color:white
+ }
+ 
+ div.container1{
+ border :0px solid grey ;
+ position :relative ;
+ height : 10vh ;
+ display:flex;
+ justify-content:space-between ;
+ top:15vh ;
+ }
+ 
+div.container2 {
+border:0px solid black;
+position :relative ;
+height:75vh;
+width: 40vw;
+display:flex ;
+text-align :center ;
+left:27vw ;
+justify-content:space-around;
+top:15vh;
+align-items:center
+}
+
+
+
+.right_arrow{
+left:-7vw;
+}
+ 
+ 
+ .indicator {
+ height : 12px;
+ width : 12px;
+ border :1px solid white ;
+ border-radius :60px;
+ position :relative;
+ }
+ 
+ 
+ .effect, .indicator:hover
+  {
+ background-color: white;
+ width :15px ;
+ height:15px 
+ 
+ }
+ 
+ 
+ 
+ 
+ }
+ 
+ 
+ 
+ 
+ 
+
+
+
+</style>
+
+</head>
+<body>
+
+<header> <h1> MY CAROUSEL</h1> </header>
+
+<br> <br> <br> 
+<main>
+
+<div class ="main_parent">
+ 
+    <div class ="img1 animate_image"><img src = "images/img4.jpg" alt = "Nature's Touch"> 
+       <div class ="caption">1/5</div>
+       <div class ="text_caption"> Nature's Touch </div>
+    </div>
+ 
+    <div class ="img1 animate_image"><img src = "images/img2.jpg" alt = "Love Hands"> 
+        <div class ="caption">2/5</div>
+         <div class ="text_caption"> Love Hands </div>
+    </div>
+    
+  
+    <div class ="img1 animate_image"><img src = "images/img3.jpg" alt = "The Clairvoyant"> 
+        <div class ="caption">3/5</div>
+         <div class ="text_caption"> The Clairvoyant</div>
+    </div>
+ 
+    <div class ="img1 animate_image"><img src = "images/img5.jpg" alt = "beach views"> 
+    
+       <div class ="caption">4/5</div>
+        <div class ="text_caption"> Beach views </div>
+    </div>
+   
+    <div class ="img1 animate_image"><img src = "images/img1.jpg" alt = "Mountain in the Sun">
+       <div class ="caption">5/5</div>
+        <div class ="text_caption"> Mountain in the Sun</div>
+    </div>
+ 
+
+</div>
+
+
+ <div class ="container1"> 
+  <span class = "left_arrow"> &#8249
+  </span>
+  <span class= "right_arrow"> &#8250 
+  </span>
+ </div>
+
+
+
+<div class ="container2 ">
+
+<span class ="indicator"></span>
+<span class ="indicator"></span>
+<span class ="indicator"></span>
+<span class ="indicator"></span>
+<span class ="indicator"></span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+// Jquery Code
+
+// Variable Declaration 
+const right_arrow= $('.right_arrow')
+const left_arrow = $('.left_arrow')
+const slide = $('.img1')
+const indicator = $('.indicator')
+
+
+// Function declaration without buttons 
+
+let slideIndex = 1;
+
+function showImage(n){
+ 
+
+  if (n>slide.length) {slideIndex=1}
+  if (n<1) {slideIndex = slide.length}
+  
+  slide.hide();
+  slide.eq(slideIndex-1).show();
+  
+  indicator.removeClass("effect");
+  indicator.eq(slideIndex-1).addClass("effect")
+
+  slideIndex++
+  }
+
+// Function call
+showImage(slideIndex)
+
+setInterval (function() {
+showImage(slideIndex)}, 3000)
+
+
+
+// without set interval, just buttons 
+
+
+//showImage(slideIndex)
+
+/*function showImage(n){
+ 
+  if (n>slide.length) {slideIndex=1}
+  if (n<1) {slideIndex = slide.length}
+  
+  slide.css("display", "none");
+  slide.eq(slideIndex-1).css("display", "block");
+  
+  indicator.removeClass("effect");
+  indicator.eq(slideIndex-1).addClass("effect")
+
+  }
+
+*/
+
+
+// next and previous buttons  
+function nextandprevious (n) {
+   showImage(slideIndex+=n)
+   }
+
+
+//indicator function
+
+function currentIndicator (n) {
+   
+   showImage (slideIndex=n)
+  }
+
+
+
+// click events 
+
+right_arrow.click(function () {nextandprevious(0)} )
+
+left_arrow.click(function () {nextandprevious(-2)})
+
+indicator.each(function (n) {$(this).click(function () {currentIndicator(n+1)})} )
+
+
+
+
+
+
+
+/*
+// Vanilla JS code
+
+const slides = document.querySelectorAll(".img1");
+const indicator = document.querySelectorAll(".indicator");
+const left_arrow = document.querySelector(".left_arrow");
+const right_arrow = document.querySelector(".right_arrow");
+
+let slideIndex = 1;
+
+// Next/previous controls
+function forwardSlide(n) {
+
+  showSlides(slideIndex += n);
+}
+
+// indicator controls
+
+function currentSlide(n) {
+
+  showSlides(slideIndex = n);
+}
+
+
+function showSlides(n) {
+  
+ if (n > slides.length) {slideIndex = 1} 
+ if (n < 1) {slideIndex = slides.length}
+  
+  slides.forEach(function(content) {content.style.display ="none"})
+ 
+  indicator.forEach(function (content) {content.classList.remove("effect")})
+      
+
+  slides[slideIndex-1].style.display = "block"; 
+ indicator[slideIndex-1].classList.add("effect");
+ 
+ slideIndex++
+}
+
+showSlides(slideIndex);
+
+setInterval (function () {showSlides(slideIndex)}, 3000 )
+
+indicator.forEach(function (content,index) {content.addEventListener("click", function () {currentSlide(index+1)} )})
+
+left_arrow.addEventListener("click",  function  () {forwardSlide (-2)})
+
+right_arrow.addEventListener("click", function () {forwardSlide (0)})
+
+*/
+</script>
+</body>
+</html>
